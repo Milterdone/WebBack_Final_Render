@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Task Manager</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+  <main>
+    <h2>Welcome back, <%= user && user.username ? user.username : 'Guest' %>!</h2>
+    <p>View your profile and manage your tasks.</p>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>

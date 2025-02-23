@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Task Manager</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+  <div class="form-container">
+    <h2>Login</h2>
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+    <form id="loginForm" action="/auth/login" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="/auth/register">Register here</a>.</p>
+  </div>
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>
